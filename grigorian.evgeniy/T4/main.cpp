@@ -42,9 +42,14 @@ int main() {
         auto rh2 = std::make_shared<Rombus>(Point{5.0, 5.0}, 2.0, 2.0);
 
         std::vector<std::shared_ptr<Shape>> shapes = {comp, r2, c2, rh1, rh2};
-
         for (const auto& s : shapes) {
             printShape(*s);
+        }
+
+        std::string cmd;
+        if (!(std::cin >> cmd)) {
+            std::cerr << "Error: No input provided\n";
+            return 1;
         }
 
         std::cout << "\n";
@@ -59,6 +64,7 @@ int main() {
 
         std::cout << "\n";
     } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << "\n";
         return 1;
     }
     return 0;
