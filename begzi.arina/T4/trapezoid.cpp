@@ -1,7 +1,11 @@
 #include "trapezoid.h"
 #include <algorithm>
+#include <stdexcept>
 
 IsoscelesTrapezoid::IsoscelesTrapezoid(Point p, double bb, double tb, double h) {
+    if (bb <= 0 || tb <= 0 || h <= 0) {
+        throw std::invalid_argument("Bases and height must be positive");
+    }
     bl = p;
     bBase = bb;
     tBase = tb;

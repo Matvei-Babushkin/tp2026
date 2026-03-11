@@ -1,6 +1,10 @@
 #include "circle.h"
+#include <stdexcept>
 
 Circle::Circle(Point c, double r) {
+    if (r <= 0) {
+        throw std::invalid_argument("Radius must be positive");
+    }
     center = c;
     radius = r;
 }

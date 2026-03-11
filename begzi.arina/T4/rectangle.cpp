@@ -1,6 +1,10 @@
 #include "rectangle.h"
+#include <stdexcept>
 
 Rectangle::Rectangle(Point bl, Point tr) {
+    if (tr.x <= bl.x || tr.y <= bl.y) {
+        throw std::invalid_argument("Rectangle must have positive width and height");
+    }
     bottomLeft = bl;
     topRight = tr;
 }
