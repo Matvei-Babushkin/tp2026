@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <memory>
 #include <vector>
@@ -270,7 +270,7 @@ void testMainTask() {
     shapes.push_back(std::make_unique<Ring>(Point(-2, 4), 3, 1));
 
     auto composite = std::make_unique<CompositeShape>();
-    composite->addShape(std::make_unique<Square>(Point(1, 1), 2)); 
+    composite->addShape(std::make_unique<Square>(Point(1, 1), 2));
     composite->addShape(std::make_unique<Ring>(Point(3, 3), 2, 1));
     composite->addShape(std::make_unique<Rectangle>(Point(2, 0), Point(4, 2)));
     shapes.push_back(std::move(composite));
