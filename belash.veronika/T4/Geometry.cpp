@@ -13,6 +13,7 @@ void printInfo(const std::vector<std::unique_ptr<Shape>>& shapes) {
         const std::unique_ptr<Shape>& shape = shapes[i];
         Point center = shape->getCenter();
 
+        // Формат: [NAME,(x.xx, y.xx), area] - БЕЗ лишних пробелов!
         std::cout << "[" << shape->getName() << ",("
             << std::fixed << std::setprecision(2) << center.x << ", "
             << center.y << "), "
@@ -21,7 +22,7 @@ void printInfo(const std::vector<std::unique_ptr<Shape>>& shapes) {
         if (shape->getName() == "COMPOSITE") {
             const CompositeShape* composite = dynamic_cast<const CompositeShape*>(shape.get());
             if (composite) {
-                std::cout << ":";
+                std::cout << ":";  // Двоеточие без пробела
                 const std::vector<std::unique_ptr<Shape>>& subShapes = composite->getShapes();
                 for (size_t j = 0; j < subShapes.size(); ++j) {
                     const std::unique_ptr<Shape>& subShape = subShapes[j];
@@ -47,7 +48,6 @@ int main() {
     shapes.push_back(std::make_unique<Ellipse>(Point{ -2, -1 }, 1.0, 0.5));
 
     std::unique_ptr<CompositeShape> composite = std::make_unique<CompositeShape>();
-
     composite->addShape(std::make_unique<Rectangle>(Point{ 1, 2 }, Point{ 3, 5 }));
     composite->addShape(std::make_unique<Ellipse>(Point{ 4, 3 }, 1.0, 2.0));
     shapes.push_back(std::move(composite));

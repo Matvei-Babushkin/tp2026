@@ -14,8 +14,7 @@ double RightTrapezoid::getArea() const {
 
 Point RightTrapezoid::getCenter() const {
     double centerY = bottomLeft_.y + height_ / 2.0;
-    double topOffset = (bottomBase_ - topBase_) / 2.0;
-    double centerX = bottomLeft_.x + topOffset + topBase_ / 2.0;
+    double centerX = bottomLeft_.x + (bottomBase_ + topBase_) / 4.0;
     return Point(centerX, centerY);
 }
 
