@@ -1,6 +1,6 @@
 #include "Rectangular_trapezoid.h"
 #include <iostream>
-RectangularTrapezoid::RectangularTrapezoid (Point bottomLeft, double baseLow, double baseUp, double height) 
+RectangularTrapezoid::RectangularTrapezoid (Point bottomLeft, double baseLow, double baseUp, double height)
 : bLow_(baseLow), bUp_(baseUp), h_(height) {
     center_.x = bottomLeft.x + (baseLow + baseUp) / 4.0;
     center_.y = bottomLeft.y + height / 2.0;
