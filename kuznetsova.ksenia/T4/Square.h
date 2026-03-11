@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#pragma once
-=======
 #ifndef SQUARE_H
 #define SQUARE_H
->>>>>>> main
 
 #include "Shape.h"
 
@@ -20,8 +16,5 @@ public:
     void scale(double factor) override;
     std::string getName() const override;
 };
-<<<<<<< HEAD
-=======
 
-#endif // SQUARE_H
->>>>>>> main
+#endif

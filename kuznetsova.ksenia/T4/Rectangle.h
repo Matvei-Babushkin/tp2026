@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#pragma once
-=======
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
->>>>>>> main
 
 #include "Shape.h"
 
@@ -21,8 +17,5 @@ public:
     void scale(double factor) override;
     std::string getName() const override;
 };
-<<<<<<< HEAD
-=======
 
-#endif // RECTANGLE_H
->>>>>>> main
+#endif

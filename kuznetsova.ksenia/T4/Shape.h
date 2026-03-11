@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#pragma once
-=======
 #ifndef SHAPE_H
 #define SHAPE_H
->>>>>>> main
 
 #include <string>
 #include "Point.h"
@@ -18,8 +14,5 @@ public:
     virtual void scale(double factor) = 0; // isotropic scaling relative to center
     virtual std::string getName() const = 0;
 };
-<<<<<<< HEAD
-=======
 
-#endif // SHAPE_H
->>>>>>> main
+#endif 
