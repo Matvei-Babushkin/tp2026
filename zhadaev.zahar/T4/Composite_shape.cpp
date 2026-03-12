@@ -115,11 +115,16 @@ double CompositeShape::getY_max()
 void CompositeShape::print()
 {
     Point center = this->getCenter();
-    std::cout << "[" << this->getName() << ", (" << center.x << ", " << center.y << "), " << this->getArea() << ":\n";
+    std::cout << "[" << this->getName() << ", ("
+    << center.x << ", " << center.y << "), "
+    << this->getArea() << ":\n";
 
     for (size_t i = 0; i < shapes.size(); i++)
     {
-        std::cout << "  " << shapes[i]->getName() << ", (" << shapes[i]->getCenter().x << ", " << shapes[i]->getCenter().y  << "), " << shapes[i]->getArea() << ",\n";
+        std::cout << "  " << shapes[i]->getName() << ", ("
+        << shapes[i]->getCenter().x << ", "
+        << shapes[i]->getCenter().y  << "), "
+        << shapes[i]->getArea() << ",\n";
     }
     std::cout << "]\n";
 }
