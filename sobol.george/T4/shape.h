@@ -14,7 +14,7 @@ public:
     virtual std::string getName() const = 0;
     virtual void move(const double& factorX, const double& factorY) = 0;
     virtual void scale(const double& factor) = 0;
-    virtual void putInComposite(std::unique_ptr<Shape> shape)
+    virtual void putInComposite(std::unique_ptr<Shape>)
     {
         if (getName() != "COMPOSITE")  return;
     }
