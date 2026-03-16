@@ -2,6 +2,7 @@
 #define SQUARE
 #include <iostream>
 #include <cstdlib>
+#include <memory>
 #include "shape.h"
 
 class Square : public Shape

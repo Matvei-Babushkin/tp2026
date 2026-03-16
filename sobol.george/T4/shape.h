@@ -2,6 +2,7 @@
 #define SHAPE
 #include <iostream>
 #include <cstdlib>
+#include <memory>
 #include "point.h"
 
 class Shape

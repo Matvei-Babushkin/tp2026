@@ -1,6 +1,7 @@
 #ifndef POINT
 #define POINT
 #include <iostream>
+#include <memory>
 #include <cstdlib>
 
 class Point

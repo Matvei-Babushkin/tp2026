@@ -2,6 +2,7 @@
 #define RECT
 #include <iostream>
 #include <cstdlib>
+#include <memory>
 #include "shape.h"
 
 class Rectangle : public Shape

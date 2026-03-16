@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <vector>
+#include <memory>
 #include "CompositeShape.h"
 
 void printInfo(const std::vector<std::unique_ptr<Shape>>& shapes)

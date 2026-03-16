@@ -1,6 +1,7 @@
 #ifndef COMPSHAPE
 #define COMPSHAPE
 #include <iostream>
+#include <memory>
 #include <cstdlib>
 #include <vector>
 #include "ellipse.h"
