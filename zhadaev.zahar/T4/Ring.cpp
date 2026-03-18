@@ -21,3 +21,7 @@ double Ring::getY_max()
 {
     return O.y + R;
 }
+void Ring::print()
+{
+    std::cout << "[" << getName() << ", (" << getCenter().x << ", " << getCenter().y << "), " << getArea() << "]\n";
+}
