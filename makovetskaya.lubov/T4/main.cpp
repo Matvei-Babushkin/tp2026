@@ -69,11 +69,11 @@ int main() {
         else {
             std::cerr << "Error: invalid scale factor format\n";
         }
-        return 1;
+        return 0;
     }
     if (factor <= 0.0) {
         std::cerr << "Error: scale factor must be positive\n";
-        return 1;
+        return 0;
     }
 
     for (auto& shape : shapes) {
