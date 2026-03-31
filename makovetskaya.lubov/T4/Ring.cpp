@@ -12,7 +12,7 @@ Ring::Ring(const Point& c, double outerR, double innerR)
 }
 
 double Ring::getArea() const {
-    return 3.14159265358979323846 * (outerRadius * outerRadius - innerRadius * innerRadius);
+    return 3.1415 * (outerRadius * outerRadius - innerRadius * innerRadius);
 }
 
 Point Ring::getCenter() const {
