@@ -16,3 +16,4 @@ public:
     const std::vector<std::shared_ptr<Shape>>& getShapes() const;
 };
 #endif
+

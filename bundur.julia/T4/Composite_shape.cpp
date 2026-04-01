@@ -53,3 +53,4 @@ std::string CompositeShape::getName() const {
 const std::vector<std::shared_ptr<Shape>>& CompositeShape::getShapes() const {
     return shapes_;
 }
+

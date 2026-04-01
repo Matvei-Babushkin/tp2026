@@ -19,3 +19,4 @@ void Ellipse::scale(double factor) {
 std::string Ellipse::getName() const {
     return "ELLIPSE";
 }
+

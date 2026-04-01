@@ -23,3 +23,4 @@ void RectangularTrapezoid::scale(double factor) {
 std::string RectangularTrapezoid::getName() const {
     return "RIGHT TRAPEZOID";
 }
+

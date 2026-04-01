@@ -5,3 +5,4 @@ struct Point {
     double y;
 };
 #endif
+
