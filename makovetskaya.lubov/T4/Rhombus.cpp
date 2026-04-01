@@ -12,6 +12,13 @@ double Rhombus::getArea() const {
     return (verticalDiagonal * horizontalDiagonal) / 2.0;
 }
 
+void Rhombus::getBoundingBox(double& minX, double& minY, double& maxX, double& maxY) const {
+    minX = center.x - verticalDiagonal / 2;
+    maxX = center.x + verticalDiagonal / 2;
+    minY = center.y - horizontalDiagonal / 2;
+    maxY = center.y + horizontalDiagonal / 2;
+}
+
 Point Rhombus::getCenter() const {
     return center;
 }

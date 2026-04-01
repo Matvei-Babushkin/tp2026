@@ -51,15 +51,19 @@ double CompositeShape::getArea() const {
 }
 
 Point CompositeShape::getCenter() const {
-    if (shapes.empty()) {
-        return Point(0, 0);
+    if (shapes.empty()) return Point(0, 0);
+
+    double totalArea = getArea();
+    double weightedX = 0, weightedY = 0;
+
+    for (const auto& shape : shapes) {
+        Point center = shape->getCenter();
+        double area = shape->getArea();
+        weightedX += center.x * area;
+        weightedY += center.y * area;
     }
 
-    double minX, minY, maxX, maxY;
-    getBoundingBox(minX, minY, maxX, maxY);
-
-    // Центр ограничивающего прямоугольника
-    return Point((minX + maxX) / 2.0, (minY + maxY) / 2.0);
+    return Point(weightedX / totalArea, weightedY / totalArea);
 }
 
 void CompositeShape::move(double dx, double dy) {

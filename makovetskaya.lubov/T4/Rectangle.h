@@ -8,6 +8,7 @@ public:
     Rectangle(const Point& bottomLeft, const Point& topRight);
 
     double getArea() const override;
+    void getBoundingBox(double& minX, double& minY, double& maxX, double& maxY) const override;
     Point getCenter() const override;
     void move(double dx, double dy) override;
     void scale(double factor) override;

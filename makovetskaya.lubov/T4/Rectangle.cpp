@@ -15,6 +15,13 @@ double Rectangle::getArea() const {
     return getWidth() * getHeight();
 }
 
+void Rectangle::getBoundingBox(double& minX, double& minY, double& maxX, double& maxY) const {
+    minX = std::min(bottomLeft.x, topRight.x);
+    maxX = std::max(bottomLeft.x, topRight.x);
+    minY = std::min(bottomLeft.y, topRight.y);
+    maxY = std::max(bottomLeft.y, topRight.y);
+}
+
 Point Rectangle::getCenter() const {
     return Point((bottomLeft.x + topRight.x) / 2.0,
         (bottomLeft.y + topRight.y) / 2.0);
